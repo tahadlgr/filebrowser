@@ -2,7 +2,9 @@ FROM alpine:latest
 RUN apk --update add ca-certificates \
                      mailcap \
                      curl \
-                     jq
+                     jq \
+                     nano \
+                     vim vim-doc vim-tutor
 
 COPY healthcheck.sh /healthcheck.sh
 RUN chmod +x /healthcheck.sh  # Make the script executable
